@@ -2,15 +2,17 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0px;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
 }
 
 /* #region header section */
 .header {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    padding: 0 2.5rem 0.5rem 2.5rem;
+    padding: 0 2.5rem 0.7rem 2.5rem;
     font-weight: bold;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
+    position: relative;
 }
 
 .header img {
@@ -115,37 +117,114 @@ div.bot div p {
 /*#endregion*/
 
 /*#region Main */
+
+/*#region main general*/
 .main {
     background-color: #e2e8f0;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     padding: 2rem;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
 }
 
-.main > div:first-child {
-    grid-row: 1 / 3;
+div.p-container {
     grid-column: 1 / 2;
+    grid-row: 1 / 3;
 }
 
-.main > div:not(:first-child) {
+div.a-container, div.t-container {
     grid-column: 2 / 3;
 }
 
+div.a-container {
+    grid-row: 1 / 2;
+}
+
+div.t-container {
+    grid-row: 2 / 3;
+}
+
 .main p {
-    margin: 0px;
+    margin: 10px;
+}
+
+.main > div > p {
+    font-weight: bold;
+}
+
+.card {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
+}
+
+.card p {
+    color: grey;
 }
 
 .card img {
     width: 2rem;
     height: 2rem;
 }
+/*#endregion*/
 
+/*#region project */
+p.subhead {
+    color: black;
+    font-weight: bold;
+}
 .project {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
+.pc {
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 0.5rem 1fr;
+    overflow: hidden;
+}
+.pc-content {
+    padding: 1rem;
+}
+.pc-content div {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+.highlight {
+    background-color: orange;
+}
+/*#endregion*/
 
+/* #region announcement */
+.announcement p {
+    min-height: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+/* #endregion */
+
+/* #region trending */
+.trend > div {
+    display: flex;
+    align-items: center;
+}
+.trend img[src="assets/svg/nyan.png"] {
+    width: 3rem;
+    height: 3rem;
+}
+/* #endregion */
 
 /*#endregion*/
