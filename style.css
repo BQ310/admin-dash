@@ -41,6 +41,7 @@ img[src="assets/svg/nyan.png"] {
     flex: 1;
     max-width: 50%;
     height: 1.5rem;
+    padding-left: 1rem;
 }
 
 .header div.bot div {
