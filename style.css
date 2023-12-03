@@ -129,23 +129,6 @@ div.bot div p {
     gap: 1rem;
 }
 
-div.p-container {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
-}
-
-div.a-container, div.t-container {
-    grid-column: 2 / 3;
-}
-
-div.a-container {
-    grid-row: 1 / 2;
-}
-
-div.t-container {
-    grid-row: 2 / 3;
-}
-
 .main p {
     margin: 10px;
 }
@@ -169,13 +152,19 @@ div.t-container {
     width: 2rem;
     height: 2rem;
 }
-/*#endregion*/
 
-/*#region project */
 p.subhead {
     color: black;
     font-weight: bold;
 }
+/*#endregion*/
+
+/*#region project */
+div.p-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
 .project {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -201,9 +190,17 @@ p.subhead {
 /*#endregion*/
 
 /* #region announcement */
+div.a-container {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
 .announcement p {
-    min-height: 0;
-    text-overflow: ellipsis;
+    font-size: .8rem;
+}
+.announcement p:not(.subhead) {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
 }
 hr {
@@ -217,6 +214,12 @@ hr {
 /* #endregion */
 
 /* #region trending */
+div.t-container {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    align-self: end;
+}
+
 .trend > div {
     display: flex;
     align-items: center;
